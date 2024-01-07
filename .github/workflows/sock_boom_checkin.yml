@@ -17,6 +17,8 @@ jobs:
 
     runs-on: ubuntu-latest
     steps:
-      - name: Set up Python 3.12
+      - name: sock——checkin
+        env:
+          CK_TOKEN: ${{ secrets.SOCKBOOM_CHECKIN_TOKEN }}
         run: |
-          curl https://api.sockboom.click/client/checkin?token=IJ6MEYUUPNPRUF3J
+          curl https://api.sockboom.click/client/checkin?token=${CK_TOKEN}
